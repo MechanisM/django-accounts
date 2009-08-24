@@ -1,0 +1,19 @@
+{% extends "account/base_form.html" %}
+{% block title %} Cancel Your account {% endblock %}
+{% block before_form %}
+    <p>
+    You're about to cancel your account. No more charges
+    will be made to your card, and your account will become
+    inactive at the end of this billing period. 
+    </p>
+    
+    <p>
+    Be sure to download any data you need before you continue.
+    When your account goes inactive, it won't be saved.
+    </p>
+
+{% endblock %}
+
+{% block fields %} 
+    <li>Are you sure?</li>
+{% endblock %}

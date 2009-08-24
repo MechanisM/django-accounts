@@ -1,0 +1,22 @@
+{% extends "account/base_form.html" %}
+{% block title %} Edit Account {% endblock %}
+{% block before_form %} 
+    <h2> Billing </h2>
+    <ul>
+        <li><a href="/account/change_payment_method/">Change Your Payment Method</a></li>
+        <li><a href="/account/cancel_payment_method/">Cancel Your account</a></li>
+    </ul>
+    <h2> Upgrade </h2>
+    <ul>
+        {% for level in subscription_levels %}
+            {% ifequal forloop.counter0 account.subscription_level_id %}
+                <li>{{ level.name }} (current)</li>
+            {% else %}
+                {# You cant 'upgrade' to the free account #}
+                {% if level.price %}
+                    <li><a href="/account/upgrade/{{ forloop.counter0 }}/">{{ level.name }}</a></li>
+                {% endif %}
+            {% endifequal %}
+        {% endfor %}
+    </ul>
+{% endblock %}

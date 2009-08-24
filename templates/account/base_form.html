@@ -1,0 +1,16 @@
+{% extends "account/base.html" %}
+{% block content %} 
+    {% block before_form %}{% endblock %}
+    {% block form %}
+        <h2> Form </h2>
+        <form method="POST"> 
+            <ul>
+                {% block fields %} {{ form.as_ul }} {% endblock %}
+                {% block additional_li %} {% endblock %}
+                <li> 
+                    <input type="submit" value="{% block submit_label %} Submit {% endblock %}" />
+                </li>
+            </ul>
+        </form>    {% endblock %}
+    {% block after_form %}{% endblock %}
+{% endblock %}

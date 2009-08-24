@@ -1,0 +1,23 @@
+{% extends "account/base_form.html" %}
+{% block title %} Upgrade {% endblock %}
+{% block before_form %}
+    <p>
+        You're about to switch to the <strong>{{ subscription_level.name }}</strong>. 
+        Beginning at the next billing cycle, your payment will change 
+        to <strong>{{ subscription_level.verbose_price }}.</strong> Changes to your plan,
+        will take effect immediately.
+    </p>
+
+    {% if requires_payment %}
+        Please enter your billing information.
+    {% endif %}
+    
+{% endblock %}
+
+{% block fields %} 
+    {% if requires_payment %}
+        {{ form.as_ul }} 
+    {% else %}
+        <li>Do you want to continue?</li>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,31 @@
+[
+    {
+        "pk": "10", 
+        "model": "account.group", 
+        "fields": {
+            "name": "Employees", 
+            "account": "1",
+            "role_set": [12]
+        }
+    },
+    
+    {
+        "pk": "11", 
+        "model": "account.group", 
+        "fields": {
+            "name": "Consultants", 
+            "account": "1",
+            "role_set": [13]
+        }
+    },
+    
+    {
+        "pk": "12", 
+        "model": "account.group", 
+        "fields": {
+            "name": "Admins", 
+            "account": "1",
+            "role_set": [13]
+        }
+    }
+]

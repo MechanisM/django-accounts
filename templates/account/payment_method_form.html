@@ -1,0 +1,35 @@
+{% extends "account/base_form.html" %}
+
+{% block title %} Payment Method {% endblock %}
+    {% block before_form %}
+        <p>
+        {% if recurring_payment %}
+            {% if recurring_payment.is_active %}
+                You're currently being charged {{ recurring_payment.amount }}/month 
+                to {{ recurring_payment.number }}. 
+            {% else %}
+                Your account is set to expire on {{ recurring_payment.final_payment }}.
+                If you'd like to prevent this, just provide your billing info below.
+            {% endif %}
+        {% else %}
+            You're not being charged a dime
+        {% endif %}
+        </p>
+        
+    {% endblock %}
+
+{% block form %}
+{% if account.requires_payment %}
+    <h2> Use a different card: </h2>
+    <form method="POST"> 
+        <ul>
+            {{ form.as_ul }}
+            {% block additional_li %} {% endblock %}
+            <li> 
+                <input type="submit" value="{% block submit_label %} Submit {% endblock %}" />
+            </li>
+        </ul>
+    </form>
+{% endif %}
+{% endblock %}
+

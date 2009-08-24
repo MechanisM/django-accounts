@@ -1,0 +1,12 @@
+{% extends "account/base.html" %}
+{% block title %} Reactivate your account {% endblock %}
+{% block content %} 
+    <p>
+    It looks like you've cancelled your free account. 
+    If you leave it cancelled, it could be deleted at any time.
+    Would you like to reactivate your account?
+    </p>
+    <form method="POST"> 
+        <input type="submit" value="Reactivate"/>
+    </form>
+{% endblock %}

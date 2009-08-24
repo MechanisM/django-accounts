@@ -1,0 +1,46 @@
+[
+    {
+        "pk": "1", 
+        "model": "account.person", 
+        "fields": {
+            "username": "snhorne", 
+            "password": "salty$7c098cddbe690582a71b955b8acf7ddac90d4c25", 
+            "first_name": "starr",
+            "last_name": "horne",
+            "email": "starr@email.com",
+            "account": "1",
+            "role_set": []
+        }
+    },
+    
+    {
+        "pk": "2", 
+        "model": "account.person", 
+        "fields": {
+            "username": "kmnicholson", 
+            "password": "salty$7c098cddbe690582a71b955b8acf7ddac90d4c25", 
+            "first_name": "kristi",
+            "last_name": "nicholson",
+            "email": "kristi@email.com",
+            "account": "1",
+            "role_set": [1],
+            "group": "12"
+        }
+    },
+    
+    {
+        "pk": "3", 
+        "model": "account.person", 
+        "fields": {
+            "username": "third", 
+            "password": "salty$7c098cddbe690582a71b955b8acf7ddac90d4c25", 
+            "first_name": "kristi",
+            "last_name": "nicholson",
+            "email": "third@email.com",
+            "account": "2",
+            "role_set": []
+            
+        }
+    }
+    
+]

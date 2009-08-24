@@ -1,0 +1,74 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>signup_test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">signup_test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/account/create/0/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id_first_name</td>
+	<td>Starr</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id_last_name</td>
+	<td>Horne</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id_email</td>
+	<td>starr@email.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id_username</td>
+	<td>starrhorne</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id_password</td>
+	<td>password</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id_password2</td>
+	<td>password</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id_group</td>
+	<td>ShoutSpring</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id_timezone</td>
+	<td>label=(GMT-05:00) Eastern Time (US & Canada)</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id_terms_of_service</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id_domain</td>
+	<td>label=localhost</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id_subdomain</td>
+	<td>user1</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

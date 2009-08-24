@@ -1,0 +1,22 @@
+[
+    {
+        "pk": "1", 
+        "model": "account.Account", 
+        "fields": {
+            "subdomain": "starr",
+            "domain": "localhost", 
+            "name": "Starr's website",
+            "subscription_level_id": 1 
+        }
+    }, 
+    {
+        "pk": "2", 
+        "model": "account.Account", 
+        "fields": {
+            "subdomain": "kristi",
+            "domain": "localhost", 
+            "name": "Kristi's website",
+            "subscription_level_id": 2 
+        }
+    } 
+]

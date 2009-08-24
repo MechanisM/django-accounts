@@ -1,0 +1,17 @@
+{% extends "account/base.html" %}
+{% block title %} 
+    This account is inactive
+{% endblock %}
+
+{% block content %} 
+    Sorry, but this account has gone inactive.  
+    {% ifrole account_admin %}
+        {% if account.requires_payment %}
+            <a href="/account/change_payment_method/">Reactivate your account</a>
+        {% else %}
+            <a href="/account/reactivate_free_account/">Reactivate your account</a>
+        {% endif %}
+    {% endifrole %}
+    
+    
+{% endblock %}

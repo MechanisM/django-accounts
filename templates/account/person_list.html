@@ -1,0 +1,22 @@
+{% extends "account/base.html" %}
+{% block title %} Your People {% endblock %}
+{% block content %} 
+    <table>
+    {% for person in object_list %}
+        <tr>
+            <td> {{ person.username }} </td>
+            <td> {{ person.first_name }} </td>
+            <td> {{ person.last_name }} </td>
+            <td> {{ person.email }} </td>
+            <td> {% for r in person.roles %} {{ r }} {% endfor %} </td>
+            <td> 
+                <a href="/person/edit/{{ person.id }}/">edit</a>  
+                {% if person.can_be_destroyed %}
+                    | <a href="/person/destroy/{{ person.id }}/">delete</a>  
+                {% endif %}
+            </td>
+        </tr>
+        
+    {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% load account_tags %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+</head>
+<body>
+    <div> 
+        {% block logout %}
+            {% if person %}
+                Logged in as {{ person.first_name }}
+                <ul>
+                    <li>{% postlink "Logout" "/person/logout/" %}</li>
+                    <li><a href="/person/"> Personal Settings </a></li>
+                    {% ifrole account_admin %}
+                        <li><a href="/account/"> Account Settings </a></li>
+                    {% endifrole %}
+                </ul>
+            {% endif %}
+        {% endblock %}
+    </div>
+
+    <h1>
+        {% block title %}
+        {% endblock %}
+    </h1>
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+[
+    {
+        "pk": "10", 
+        "model": "account.Role", 
+        "fields": {
+            "name": "guest" 
+        }
+    },
+    
+    {
+        "pk": "11", 
+        "model": "account.Role", 
+        "fields": {
+            "name": "admin"
+        }
+    },
+    
+    {
+        "pk": "12", 
+        "model": "account.Role", 
+        "fields": {
+            "name": "employee"
+        }
+    },
+    
+    {
+        "pk": "13", 
+        "model": "account.Role", 
+        "fields": {
+            "name": "consultant"
+        }
+    },
+    {
+        "pk": "14", 
+        "model": "account.Role", 
+        "fields": {
+            "name": "janitor"
+        }
+    }
+]

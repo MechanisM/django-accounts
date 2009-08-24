@@ -1,0 +1,6 @@
+{% extends "account/base_form.html" %}
+{% block title %} {{ account.name }} Login {% endblock %}
+{% block submit_label %} Login {% endblock %}
+{% block additional_li %} 
+  <li>(<a href="/person/reset_password/">I forgot my password/username</a>)</li>
+{% endblock %}
